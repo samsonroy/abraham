@@ -6,6 +6,7 @@ import MyTabBar from '@common/MyTabBar';
 
 import Splash from '../containers/Landing';
 import Home from '../containers/Home';
+import Explore from '../containers/Explore';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -14,10 +15,10 @@ function HomeTabs() {
 	return (
 		<Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
 			<Tab.Screen name="home" component={Home} />
-			<Tab.Screen name="community" component={Home} />
-			<Tab.Screen name="explore" component={Home} />
-			<Tab.Screen name="marketplace" component={Home} />
-			<Tab.Screen name="chat" component={Home} />
+			<Tab.Screen name="community" component={Explore} />
+			<Tab.Screen name="explore" component={Explore} />
+			<Tab.Screen name="marketplace" component={Explore} />
+			<Tab.Screen name="chat" component={Explore} />
 		</Tab.Navigator>
 	);
 }
@@ -37,12 +38,7 @@ const AppNavigator = () => {
 					options={{headerShown: false}}
 				/>
 				<Stack.Screen
-					name="Home"
-					component={Home}
-					options={{headerShown: false}}
-				/>
-				<Stack.Screen
-					name="Home"
+					name="Landing"
 					component={HomeTabs}
 					options={{headerShown: false}}
 				/>

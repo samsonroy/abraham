@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import {verticalScale, scale} from '@helpers/scale';
-import Amigos from '@assets/images/logo.svg';
+import Amigos from '@assets/images/logo.png';
 // import ExploreActive from '@assets/images/exploreactive.svg';
 // import ExploreInActive from '@assets/images/exploreinactive.svg';
 import ChatActive from '@assets/images/bottombarIcons/chatactive.svg';
@@ -12,7 +12,7 @@ import GroupChatActive from '@assets/images/bottombarIcons/groupchatactive.svg';
 import GroupChatInActive from '@assets/images/bottombarIcons/groupchatinactive.svg';
 import MarketPlaceActive from '@assets/images/bottombarIcons/marketplaceactive.svg';
 import MarketPlaceInActive from '@assets/images/bottombarIcons/marketplaceinactive.svg';
-import {neutral10} from '../../helpers/colors';
+// import {neutral10} from '../../helpers/colors';
 
 const MyTabBar = ({state, descriptors, navigation}) => {
 	const focusedOptions = descriptors[state.routes[state.index].key].options;
@@ -83,7 +83,7 @@ const MyTabBar = ({state, descriptors, navigation}) => {
 												styles.exploricon,
 												styles.inactiveColor,
 											]}>
-											<Amigos alignSelf={'center'} />
+											{/* <Amigos /> */}
 										</View>
 									</View>
 								);
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
 	container: {
 		position: 'absolute',
 		bottom: 0,
-		backgroundColor: neutral10,
+		backgroundColor: '#ffffff',
 		flexDirection: 'row',
 		borderTopLeftRadius: 32,
 		borderTopRightRadius: 32,
